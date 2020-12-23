@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from '../product.service';
+import {Injectable} from '@angular/core';
 
 @Component({
   selector: 'app-product-description',
   templateUrl: './product-description.component.html',
   styleUrls: ['./product-description.component.css']
 })
-export class ProductDescriptionComponent implements OnInit {
+export class ProductDescriptionComponent implements OnInit, ProductService {
 
-  constructor() { }
+  constructor(_productService: ProductService) { }
 
   ngOnInit() {
   }
