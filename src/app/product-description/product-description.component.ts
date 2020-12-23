@@ -7,11 +7,13 @@ import {Injectable} from '@angular/core';
   templateUrl: './product-description.component.html',
   styleUrls: ['./product-description.component.css']
 })
-export class ProductDescriptionComponent implements OnInit, ProductService {
-
-  constructor(_productService: ProductService) { }
+export class ProductDescriptionComponent implements OnInit {
+  albumInfo;
+  constructor(private _productService: ProductService) { }
 
   ngOnInit() {
+    this._productService.getAlbum(1).subscribe(response =>
+      this.albumInfo = response);
   }
 
 }
