@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../product.service';
 import {Injectable} from '@angular/core';
+import {Track} from '../track';
+import {Album} from '../album';
 
 @Component({
   selector: 'app-product-description',
